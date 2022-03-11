@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
     const chats = chatData.map((chat) => chat.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('homepage', {
+    res.render('startcloud', {
       chats,
       logged_in: req.session.logged_in,
     });
