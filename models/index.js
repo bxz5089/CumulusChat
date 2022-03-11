@@ -1,9 +1,9 @@
-const User = require('./userChat');
-const Chat = require('./Chat');
+// const User = require('./userChat');
+// const Chat = require('./Chat');
+
 
 //create socket on server side
-
-const io = socketio(server);
+const { appendUser, deleteUser, obtainUser, putUsersInRoom } = require('./userChat');
 
 io.on('connect', (socket) => {
   socket.on('join', ({ name, room }, callback) => {
@@ -40,15 +40,15 @@ io.on('connect', (socket) => {
 });
 
 
-User.hasMany(Chat, {
-  foreignKey: 'user_id',
-  onDelete: 'CASCADE',
-});
+// User.hasMany(Chat, {
+//   foreignKey: 'user_id',
+//   onDelete: 'CASCADE',
+// });
 
-Chat.belongsTo(User, {
-  foreignKey: 'user_id',
-});
+// Chat.belongsTo(User, {
+//   foreignKey: 'user_id',
+// });
 
-module.exports = { User, Chat };
+// module.exports = { User, Chat };
 
 

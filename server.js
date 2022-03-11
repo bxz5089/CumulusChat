@@ -5,8 +5,10 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 
-const io = socketio(server);
-const socketio = require('socket.io');
+const httpServer = require('http').createServer(app);
+const options = { /*...*/};
+const io = require('socket.io')(httpServer, options);
+
 
 
 const sequelize = require('./config/connection');
@@ -14,16 +16,11 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-const server = http.createServer(app);
 
-
-chatIo.on("connection", function (socket) {
-  console.log("User connected", socket.id);
-});
 
 // Set up Handlebars.js engine with custom helpers
 const hbs = exphbs.create({});
-
+//need to go into a .env
 const sess = {
   secret: 'Somethig is cooking',
   cookie: {},
@@ -45,7 +42,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(server, io );
+app.use(server, io);
 
 app.use(routes);
 
