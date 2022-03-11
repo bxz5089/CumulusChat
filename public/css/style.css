@@ -15,7 +15,7 @@ button {
   font-size: 30px;
   color: #774f38;
   padding: 0px 40px;
-  font-family: "Baloo 2", cursive;
+  font-family: 'Baloo 2', cursive;
   font-weight: bold;
   letter-spacing: 3px;
 }
@@ -34,13 +34,13 @@ body p {
   border-radius: 11px;
   position: relative;
   box-shadow: 20px 20px #83af9b;
-  font-family: "Baloo 2", cursive;
+  font-family: 'Baloo 2', cursive;
 }
 
 body p:after {
   transform: translatey(0px);
   animation: float2 5s ease-in-out infinite;
-  content: ".";
+  content: '.';
   font-weight: bold;
   -webkit-text-fill-color: #ece5ce;
   text-shadow: 22px 22px #83af9b;
@@ -60,32 +60,31 @@ body p:after {
 }
 @keyframes float {
   0% {
-      transform: translatey(0px);
- }
+    transform: translatey(0px);
+  }
   50% {
-      transform: translatey(-20px);
- }
+    transform: translatey(-20px);
+  }
   100% {
-      transform: translatey(0px);
- }
+    transform: translatey(0px);
+  }
 }
 @keyframes float2 {
   0% {
-      line-height: 30px;
-      transform: translatey(0px);
- }
+    line-height: 30px;
+    transform: translatey(0px);
+  }
   55% {
-      transform: translatey(-20px);
- }
+    transform: translatey(-20px);
+  }
   60% {
-      line-height: 10px;
- }
+    line-height: 10px;
+  }
   100% {
-      line-height: 30px;
-      transform: translatey(0px);
- }
+    line-height: 30px;
+    transform: translatey(0px);
+  }
 }
-
 /*login page */
 
 .gradient-custom {
@@ -93,10 +92,18 @@ body p:after {
   background: #6a11cb;
 
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+  background: -webkit-linear-gradient(
+    to right,
+    rgba(106, 17, 203, 1),
+    rgba(37, 117, 252, 1)
+  );
 
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+  background: linear-gradient(
+    to right,
+    rgba(106, 17, 203, 1),
+    rgba(37, 117, 252, 1)
+  );
 }
 
 /*message dashboard*/
