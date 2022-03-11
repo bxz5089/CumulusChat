@@ -1,5 +1,44 @@
-const User = require('./User');
+const User = require('./userChat');
 const Chat = require('./Chat');
+
+//create socket on server side
+
+const io = socketio(server);
+
+io.on('connect', (socket) => {
+  socket.on('join', ({ name, room }, callback) => {
+    const { error, user } = appendUser({ id: socket.id, name, room });
+
+    if(error) return callback(error);
+
+    socket.join(user.room);
+
+    socket.emit('message', { user: 'admin', text: `${user.name}, welcome to room ${user.room}.`});
+    socket.broadcast.to(user.room).emit('message', { user: 'admin', text: `${user.name} has joined!` });
+
+    io.to(user.room).emit('roomData', { room: user.room, users: putUsersInRoom(user.room) });
+
+    callback();
+  });
+
+  socket.on('sendMessage', (message, callback) => {
+    const user = appendUser(socket.id);
+
+    io.to(user.room).emit('message', { user: user.name, text: message });
+
+    callback();
+  });
+
+  socket.on('disconnect', () => {
+    const user = deleteUser(socket.id);
+
+    if(user) {
+      io.to(user.room).emit('message', { user: 'Admin', text: `${user.name} has left.` });
+      io.to(user.room).emit('roomData', { room: user.room, users: putUsersInRoom(user.room)});
+    }
+  })
+});
+
 
 User.hasMany(Chat, {
   foreignKey: 'user_id',
@@ -11,3 +50,5 @@ Chat.belongsTo(User, {
 });
 
 module.exports = { User, Chat };
+
+
