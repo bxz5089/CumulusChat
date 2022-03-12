@@ -1,9 +1,15 @@
+// dependencies 
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
-// const helpers = require('./utils/helpers');
+
+const httpServer = require('http').createServer(app);
+const options = { /*...*/};
+const io = require('socket.io')(httpServer, options);
+
+
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -11,11 +17,12 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const app = express();
 const PORT = process.env.PORT || 3001;
 
+
 // Set up Handlebars.js engine with custom helpers
 const hbs = exphbs.create({});
-
+//need to go into a .env
 const sess = {
-  secret: 'Super secret secret',
+  secret: 'Somethig is cooking',
   cookie: {},
   resave: false,
   saveUninitialized: true,
@@ -31,8 +38,11 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.json());
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(server, io);
 
 app.use(routes);
 

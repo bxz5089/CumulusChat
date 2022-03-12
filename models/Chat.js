@@ -41,3 +41,4 @@ Chat.init(
 );
 
 module.exports = Chat;
+
