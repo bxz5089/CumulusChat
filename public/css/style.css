@@ -1,5 +1,12 @@
-/*home page */
-body {
+/* main */
+a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/*Login */
+.loginBody {
   height: 100vh;
   margin: 0;
   display: grid;
@@ -19,7 +26,7 @@ button {
   font-weight: bold;
   letter-spacing: 3px;
 }
-body p {
+.cloud {
   transform: translatey(0px);
   animation: float 5s ease-in-out infinite;
   mix-blend-mode: multiply;
@@ -37,7 +44,7 @@ body p {
   font-family: 'Baloo 2', cursive;
 }
 
-body p:after {
+.cloud:after {
   transform: translatey(0px);
   animation: float2 5s ease-in-out infinite;
   content: '.';
@@ -86,25 +93,6 @@ body p:after {
   }
 }
 /*login page */
-
-.gradient-custom {
-  /* fallback for old browsers */
-  background: #6a11cb;
-
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-linear-gradient(
-    to right,
-    rgba(106, 17, 203, 1),
-    rgba(37, 117, 252, 1)
-  );
-
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background: linear-gradient(
-    to right,
-    rgba(106, 17, 203, 1),
-    rgba(37, 117, 252, 1)
-  );
-}
 
 /*message dashboard*/
 body {
