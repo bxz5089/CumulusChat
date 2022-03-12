@@ -20,17 +20,19 @@ const appendUser = ({ id, name, room }) => {
   users.push(user);
 
   return { user };
-}
+};
 
 const deleteUser = (id) => {
   const index = users.findIndex((user) => user.id === id);
 
   if(index !== -1){
     return users.splice(index, 1)[0];
-}
+  }
 
-const obtainUser = (id) => users.find((user) => user.id === id);
+  const obtainUser = (id) => users.find((user) => user.id === id);
 
-const putUsersInRoom = (room) => users.filter((user) => user.room === room);
+  const putUsersInRoom = (room) => users.filter((user) => user.room === room);
 
-module.exports = { appendUser, deleteUser, obtainUser, putUsersInRoom };
+  module.exports = { appendUser, deleteUser, obtainUser, putUsersInRoom };
+
+};
