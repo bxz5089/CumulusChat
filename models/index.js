@@ -9,7 +9,9 @@ io.on('connect', (socket) => {
   socket.on('join', ({ name, room }, callback) => {
     const { error, user } = appendUser({ id: socket.id, name, room });
 
-    if(error) return callback(error);
+    if(error) {
+      return callback(error);
+    }
 
     socket.join(user.room);
 
@@ -36,7 +38,7 @@ io.on('connect', (socket) => {
       io.to(user.room).emit('message', { user: 'Admin', text: `${user.name} has left.` });
       io.to(user.room).emit('roomData', { room: user.room, users: putUsersInRoom(user.room)});
     }
-  })
+  });
 });
 
 
