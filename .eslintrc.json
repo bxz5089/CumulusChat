@@ -5,8 +5,8 @@
     "commonjs": true,
     "node": true,
     "es6": true,
-    "es2017": true,
-    "es2018": true
+    "es2017": true
+    
   },
   "rules": {
     "no-undef-init": "error",
@@ -25,7 +25,7 @@
     "no-trailing-spaces": "error",
     "default-case": "error",
     "no-fallthrough": "error",
-    "no-unused-vars": "error",
+    "no-unused-vars": "warn",
     "no-use-before-define": "error",
     "no-redeclare": "error",
     "brace-style": "error",
