@@ -1,9 +1,10 @@
-// dependencies 
+// dependencies
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
+const app = express();
 
 const httpServer = require('http').createServer(app);
 const options = { /*...*/};
@@ -14,7 +15,6 @@ const io = require('socket.io')(httpServer, options);
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-const app = express();
 const PORT = process.env.PORT || 3001;
 
 
@@ -45,6 +45,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(server, io);
 
 app.use(routes);
+
+
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
