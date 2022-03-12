@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
     const chats = chatData.map((chat) => chat.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('chat', {
+    res.render('login', {
       chats,
       logged_in: req.session.logged_in,
     });
@@ -77,6 +77,16 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
+});
+
+router.get('/signUp', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  // if (req.session.logged_in) {
+  //   res.redirect('/signUp');
+  //   return;
+  // }
+
+  res.render('signUp');
 });
 
 module.exports = router;
