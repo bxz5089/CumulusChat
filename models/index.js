@@ -1,6 +1,7 @@
 const User = require('./User');
 const Chat = require('./Chat');
 
+
 //create socket on server side
 
 User.hasMany(Chat, {
