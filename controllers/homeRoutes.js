@@ -6,22 +6,22 @@ router.get('/', async (req, res) => {
   res.render('startcloud');
 });
 
-router.get('/chat/:id', async (req, res) => {
+router.get('/chat', async (req, res) => {
   try {
-    const chatData = await Chat.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
+    // const chatData = await Chat.findByPk(req.params.id, {
+    //   include: [
+    //     {
+    //       model: User,
+    //       attributes: ['name'],
+    //     },
+    //   ],
+    // });
 
-    const chat = chatData.get({ plain: true });
+    // const chat = chatData.get({ plain: true });
 
     res.render('chat', {
-      ...chat,
-      logged_in: req.session.logged_in,
+      // ...chat,
+      // logged_in: req.session.logged_in,
     });
   } catch (err) {
     res.status(500).json(err);
