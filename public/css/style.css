@@ -100,7 +100,33 @@ button {
 /*login page */
 
 /*message dashboard*/
-#form { background: rgba(0, 0, 0, 0.15); padding: 0.25rem; position: fixed; bottom: 0; left: 0; right: 0; display: flex; height: 3rem; box-sizing: border-box; backdrop-filter: blur(10px); }
+.messageBox{
+  background-color: #774f38;
+  height: 400px;
+  margin: 20px auto 20px auto;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.messageInput{
+  background-color: #774f38;
+  border-radius: 10px;
+}
+
+#form { 
+  background: rgba(0, 0, 0, 0.15); 
+  padding: 0.25rem; 
+  position: fixed; 
+  bottom: 20px; 
+  left: 20%; 
+  right: 20%; 
+  display: flex; 
+  height: 3rem; 
+  box-sizing: border-box; 
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+ }
 #input { border: none; padding: 0 1rem; flex-grow: 1; border-radius: 2rem; margin: 0.25rem; }
 #input:focus { outline: none; }
 #form > button { background: #333; border: none; padding: 0 1rem; margin: 0.25rem; border-radius: 3px; outline: none; color: #fff; }
