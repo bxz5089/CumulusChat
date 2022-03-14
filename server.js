@@ -3,21 +3,17 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
-const http = require('http');
+const app = express();
+// const http = require('http').Server(app);
+// const io = require('socket.io')(http);
 
 // const helpers = require('./utils/helpers');
 
-const app = express();
+
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const PORT = process.env.PORT || 3001;
-
-const server = http.createServer(app);
-const { Server } = require('socket.io');
-const io = new Server(server);
-
-
 
 const users = {}
 
@@ -27,6 +23,8 @@ const users = {}
 //     socket.broadcast.emit('user-connected', name)
 //   });
 // });
+
+// let socket = io.connect('http://localhost');
 
 // socket.on('send-chat-message', message => {
 //   socket.broadcast.emit('chat-message', { message: message, name: users[socket.id] })
@@ -64,8 +62,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 
-
-
 sequelize.sync({ force: false }).then(() => {
-  server.listen(PORT, () => console.log('Now listening'));
+  app.listen(PORT, () => console.log('Now listening at http://localhost:3001/'));
 });

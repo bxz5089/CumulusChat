@@ -1,118 +1,38 @@
-<div class='container'>
-  <div class='row clearfix'>
-    <div class='col-lg-12'>
-      <div class='card chat-app'>
-        <div id='plist' class='people-list'>
-          <div class='input-group'>
-            <div class='input-group-prepend'>
-              <span class='input-group-text'><i class='fa fa-search'></i></span>
-            </div>
-            <input type='text' class='form-control' placeholder='Search...' />
-          </div>
-          <ul class='list-unstyled chat-list mt-2 mb-0'>
-            <li class='clearfix'>
-              <img
-                src='https://bootdey.com/img/Content/avatar/avatar1.png'
-                alt='avatar'
-              />
-              <div class='about'>
-                <div class='name'>dog</div>
-                <div class='status'>
-                  <i class='fa fa-circle offline'></i>
-                </div>
-              </div>
-            </li>
-            <li class='clearfix active'>
-              <img
-                src='https://bootdey.com/img/Content/avatar/avatar2.png'
-                alt='avatar'
-              />
-              <div class='about'>
-                <div class='name'>Cat</div>
-                <div class='status'>
-                  <i class='fa fa-circle online'></i>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class='chat'>
-          <div class='chat-header clearfix'>
-            <div class='row'>
-              <div class='col-lg-6'>
-                <a
-                  href='javascript:void(0);'
-                  data-toggle='modal'
-                  data-target='#view_info'
-                >
-                  <img
-                    src='https://bootdey.com/img/Content/avatar/avatar2.png'
-                    alt='avatar'
-                  />
-                </a>
-                <div class='chat-about'>
-                  <h6 class='m-b-0'>Cat</h6>
-                </div>
-              </div>
-              <div class='col-lg-6 hidden-sm text-right'>
-                <a
-                  href='javascript:void(0);'
-                  class='btn btn-outline-secondary'
-                ><i class='fa fa-camera'></i></a>
-                <a href='javascript:void(0);' class='btn btn-outline-primary'><i
-                    class='fa fa-image'
-                  ></i></a>
-                <a href='javascript:void(0);' class='btn btn-outline-info'><i
-                    class='fa fa-cogs'
-                  ></i></a>
-                <a href='javascript:void(0);' class='btn btn-outline-warning'><i
-                    class='fa fa-question'
-                  ></i></a>
-              </div>
-            </div>
-          </div>
-          <div class='chat-history'>
-            <ul class='m-b-0'>
-              <li class='clearfix'>
-                <div class='message-data text-right'>
-                  <img
-                    src='https://bootdey.com/img/Content/avatar/avatar7.png'
-                    alt='avatar'
-                  />
-                </div>
-                <div class='message other-message float-right'>
-                  Hi Dog, how are you? How is the project coming along?
-                </div>
-              </li>
-              <li class='clearfix'>
-                <div class='message-data'>
-                  <span class='message-data-time'>10:12 AM, Today</span>
-                </div>
-                <div class='message my-message'>Are we meeting today?</div>
-              </li>
-              <li class='clearfix'>
-                <div class='message-data'>
-                  <span class='message-data-time'>10:15 AM, Today</span>
-                </div>
-                <div class='message my-message'>Project has been already
-                  finished and I have results to show you.</div>
-              </li>
-            </ul>
-          </div>
-          <div class='chat-message clearfix'>
-            <div class='input-group mb-0'>
-              <div class='input-group-prepend'>
-                <span class='input-group-text'><i class='bi bi-send'></i></span>
-              </div>
-              <input
-                type='text'
-                class='form-control'
-                placeholder='Enter text here...'
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+<body>
+  <div class="messageBox">
+    <ul id="messages"></ul>
+    Testing
+  </div>
+
+  <div class="input-group mb-3 messageInput">
+  <input type="text" class="form-control" placeholder="Message" aria-label="Message" aria-describedby="basic-addon2" id="input">
+    <div class="input-group-append">
+     <button class="btn" type="button">Send</button>
     </div>
   </div>
-</div>
+
+  <script src="/socket.io/socket.io.js"></script>
+
+  <script>
+    var socket = io();
+
+    var messages = document.getElementById('messages');
+    var form = document.getElementById('form');
+    var input = document.getElementById('input');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      if (input.value) {
+        socket.emit('chat message', input.value);
+        input.value = '';
+      }
+    });
+
+    socket.on('chat message', function(msg) {
+      var item = document.createElement('li');
+      item.textContent = msg;
+      messages.appendChild(item);
+      window.scrollTo(0, document.body.scrollHeight);
+    });
+  </script>
+  </body>
