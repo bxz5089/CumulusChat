@@ -11,8 +11,7 @@ router.get('/chat', async (req, res) => {
     // const chatData = await Chat.findByPk(req.params.id, {
     //   include: [
     //     {
-    //       model: User,
-    //       attributes: ['name'],
+    //       model: chat,
     //     },
     //   ],
     // });
