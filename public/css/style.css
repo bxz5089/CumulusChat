@@ -10,6 +10,26 @@ body {
   margin-top: 20px;
 }
 
+Button {
+  background-color: #ece5ce;
+  border-radius: 10px;
+  border-color: transparent;
+  font-size: 20px;
+  color: #774f38;
+  padding: 0px 10px;
+  font-family: 'Baloo 2', cursive;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+button:hover {background-color: #ece5ce}
+
+button:active {
+  background-color: #ece5ce;
+  transform: translateY(2px);
+}
+
+
 .centerDiv { 
   height: 200px;
   position: relative;
@@ -50,6 +70,7 @@ body {
   transform: translatey(0px);
   animation: float 5s ease-in-out infinite;
 }
+
 .cloud {
   transform: translatey(0px);
   animation: float 5s ease-in-out infinite;
@@ -63,7 +84,7 @@ body {
   padding: 50px;
   border-radius: 11px;
   position: relative;
-  box-shadow: 20px 20px #83af9b;
+  box-shadow: 10px 15px #83af9b;
   font-family: 'Baloo 2', cursive;
 }
 
@@ -85,7 +106,7 @@ body {
   display: block;
   bottom: -30px;
   left: 0;
-  box-shadow: 22px 22px #83af9b;
+  box-shadow: 10px 15px #83af9b;
   z-index: -2;
 }
 @keyframes float {

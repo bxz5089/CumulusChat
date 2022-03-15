@@ -3,7 +3,7 @@ const { Chat, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
-  res.render('startcloud');
+  res.render('start');
 });
 
 router.get('/chat', async (req, res) => {
