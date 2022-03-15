@@ -1,12 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models'); //need models
 
-//get request from userChat.js
-router.get("/", (req, res) => {
-  res.send({ response: "Server is up and running." }).status(200);
-});
-
-
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
