@@ -1,40 +1,58 @@
 /* main */
 a {
-  color: black;
+  color: #774f38;
   background-color: transparent;
   text-decoration: none;
 }
 
 body {
-  background-color: #ece5ce;
+  background-color: #f4f0e6;
   margin-top: 20px;
 }
 
-/*Login */
+.centerDiv { 
+  height: 200px;
+  position: relative;
+}
+
+.center{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* main end */
+
+/* login page */
 .loginBody {
   height: 100vh;
   margin: 0;
   display: grid;
   place-items: center;
   font: 2vw system-ui;
-  background-color: #ece5ce;
+  background-color: #f4f0e6;
 }
 
-button {
+.flowButton {
   background-color: #ece5ce;
+  box-shadow: 10px 10px #83af9b;
   border-radius: 20px;
-  border-color: #c8c8a9;
   font-size: 30px;
   color: #774f38;
   padding: 0px 40px;
   font-family: 'Baloo 2', cursive;
   font-weight: bold;
   letter-spacing: 3px;
+  mix-blend-mode: multiply;
+  transform: translatey(0px);
+  animation: float 5s ease-in-out infinite;
 }
 .cloud {
   transform: translatey(0px);
   animation: float 5s ease-in-out infinite;
-  mix-blend-mode: multiply;
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
@@ -97,11 +115,12 @@ button {
     transform: translatey(0px);
   }
 }
-/*login page */
+/*login page end */
 
-/*message dashboard*/
+/* chat page */
 .messageBox{
-  background-color: #774f38;
+  background-color: #ece5ce;
+  box-shadow: 10px 10px #83af9b;
   height: 400px;
   margin: 20px auto 20px auto;
   width: 100%;
@@ -109,8 +128,16 @@ button {
   border-radius: 10px;
 }
 
+.innerBox{
+  background-color: #f4f0e6;
+  border-radius: 10px;
+  padding: 5px 10px;
+
+}
+
 .messageInput{
-  background-color: #774f38;
+  background-color: #ece5ce;
+  box-shadow: 10px 10px #83af9b;
   border-radius: 10px;
 }
 
@@ -135,3 +162,4 @@ button {
 #messages > li { padding: 0.5rem 1rem; }
 #messages > li:nth-child(odd) { background: #efefef; }
 
+/* chat page end */
