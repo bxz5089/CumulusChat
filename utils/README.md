@@ -23,4 +23,4 @@ This project is license under the ISC license.
 ## Tests
 To run tests, you need to run the following command: undefined
 # Questions
-If you have any questions about the repo, open an issue or contact Eli-coding bxz5089 mbarrienos1129 Geneviealba directly bxz5089@gmail.com eli@gmail.com michael.barrientos@gmail.com sunnydayvirtual@gmail.com.
+If you have any questions about the repo, open an issue or contact Eli-coding bxz5089 mbarrienos1129 Geneviealba directly bxz5089@gmail.com elizabethyoannnie2020@gmail.com michael.barrientos@gmail.com sunnydayvirtual@gmail.com.
