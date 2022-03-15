@@ -1,3 +1,5 @@
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
+
 <body>
   <br>
   <br>
@@ -17,13 +19,20 @@
 
   <div class="input-group mb-3 messageInput">
   <input type="text" class="form-control" placeholder="Message" aria-label="Message" aria-describedby="basic-addon2" id="input">
-    <div class="input-group-append">
-     <button type="button">Send</button>
+    <div id ="cumulus-chat">
+      <div id="cumulus-window">
+        <div id="output"></div>
+        <div id="feedback"></div>
+      </div>
+      <input id="handle" type="text" placeholder="Handle"/>
+      <input id="message" type="text" placeholder="Message"/>
+     <button id="send" type="button">Send</button>
     </div>
   </div>
 
   <br>
   <a href='/'><button id="logout" type='submit'>Logout</button></a>
+  <script src="../public/js/front_end_chat.js"></script>
 
 
   {{!-- <script src="/socket.io/socket.io.js"></script>

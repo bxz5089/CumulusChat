@@ -9,7 +9,10 @@ const app = express();
 // const http = require('http').Server(app);
 // const io = require('socket.io')(http);
 
-
+//socket.io test
+// const socket = require('socket.io');
+// const io = socket(server);
+//
 
 
 const sequelize = require('./config/connection');
@@ -17,7 +20,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const PORT = process.env.PORT || 3001;
 
-const users = {}
+const users = {};
 
 // io.on('connection', socket => {
 //   socket.on('new-user', name => {
@@ -36,7 +39,16 @@ const users = {}
 //   delete users[socket.id]
 // });
 
+//socket.io test
+// io.on('connection', (socket) => {
+//   console.log('Socket connected', socket.id);
 
+//   // Handle chat event
+//   socket.on('chat', function(data) {
+//     console.log(data);
+//     io.sockets.emit('chat', data);
+//   });
+// });//
 const hbs = exphbs.create({ helpers });
 
 const sess = {
