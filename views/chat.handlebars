@@ -1,12 +1,18 @@
 <body>
   <br>
-  <a href='/'><button id="logout" type='submit'>Logout</button></a>
- 
+  <br>
+  <div class="userWelcome">Welcome to Cumulus Chat, <span>{{username}}</span>!</div>
   <div class="messageBox">
-    <div class="innerBox">
-      <ul id="messages"></ul>
-      username: Testing
+    {{#if chats.length}}
+    <div>
+      {{#each chats as | chat |}} 
+      <ul class="innerBox">
+        <div class="messageHeader">{{chat.username}}<span class="messageTime">{{format_date chat.date_created}}</span></div>
+        <p id="messages">{{chat.message}}</p>
+      </ul> 
+      {{/each}}
     </div>
+    {{/if}}
   </div>
 
   <div class="input-group mb-3 messageInput">
@@ -16,8 +22,11 @@
     </div>
   </div>
 
+  <br>
+  <a href='/'><button id="logout" type='submit'>Logout</button></a>
 
-  <script src="/socket.io/socket.io.js"></script>
+
+  {{!-- <script src="/socket.io/socket.io.js"></script>
 
   <script>
     var socket = io();
@@ -40,5 +49,5 @@
       messages.appendChild(item);
       window.scrollTo(0, document.body.scrollHeight);
     });
-  </script>
+  </script> --}}
   </body>
