@@ -142,9 +142,9 @@ button:active {
 
 /* chat page */
 .userWelcome{
-  background-color: #ece5ce;
-  box-shadow: 10px 10px #83af9b;
-  color: #774f38;
+  background-color: #53ceff;
+  box-shadow: 10px 10px #f0fb56;
+  color: #1c2d79;
   padding: 10px;
   border-radius: 10px;
   margin-top: 10px;
@@ -154,14 +154,14 @@ button:active {
 }
 
 .userWelcome span{
-  color: #83af9b;
+  color: #2d65ff;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .messageBox{
-  background-color: #ece5ce;
-  box-shadow: 10px 10px #83af9b;
+  background-color: #8cdeff;
+  box-shadow: 10px 10px rgb(15, 31, 83);
   height: 400px;
   margin: 20px auto 20px auto;
   width: 100%;
@@ -178,8 +178,8 @@ button:active {
 }
 
 .messageInput{
-  background-color: #ece5ce;
-  box-shadow: 10px 10px #83af9b;
+  background-color: #52ceff;
+  box-shadow: 10px 10px rgb(15, 31, 83);
   border-radius: 10px;
 }
 

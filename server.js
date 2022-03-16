@@ -10,6 +10,9 @@ const app = express();
 // const io = require('socket.io')(http);
 
 
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
+
 
 
 const sequelize = require('./config/connection');
@@ -35,7 +38,6 @@ const users = {};
 //   socket.broadcast.emit('user-disconnected', users[socket.id])
 //   delete users[socket.id]
 // });
-
 
 const hbs = exphbs.create({ helpers });
 
@@ -63,5 +65,5 @@ app.use(routes);
 
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening at http://localhost:3001/'));
+  server.listen(PORT, () => console.log('Now listening at http://localhost:3001/'));
 });
