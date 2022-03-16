@@ -25,10 +25,10 @@ Button {
   margin: 5px 5px;
 }
 
-button:hover {background-color: #ece5ce}
+button:hover {background-color: #4f42ff}
 
 button:active {
-  background-color: #ece5ce;
+  background-color: #4f42ff;
   transform: translateY(2px);
 }
 
@@ -55,7 +55,7 @@ button:active {
   display: grid;
   place-items: center;
   font: 2vw system-ui;
-  background-color: #d3ffff;
+  background-color: #344ec3;
 }
 
 .flowButton {
