@@ -9,7 +9,6 @@ const message = document.getElementById('message'),
 btn.addEventListener('click', function() {
   socket.emit('chat', {
     message: message.value,
-    handle: handle.value
   });
   message.value = '';
 });
