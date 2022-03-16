@@ -11,7 +11,8 @@ const app = express();
 
 //socket.io test
 // const socket = require('socket.io');
-// const io = socket(server);
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
 //
 
 
@@ -40,15 +41,20 @@ const users = {};
 // });
 
 //socket.io test
-// io.on('connection', (socket) => {
-//   console.log('Socket connected', socket.id);
+io.on('connection', socket => {
+  console.log('Socket connected', socket.id);
 
-//   // Handle chat event
-//   socket.on('chat', function(data) {
-//     console.log(data);
-//     io.sockets.emit('chat', data);
-//   });
-// });//
+  // Handle chat event
+  socket.on('chat', function(data) {
+    console.log(data);
+    io.sockets.emit('chat', data);
+  });
+
+  //Handle typing event
+  // socket.on('typing', funstion(data) {
+  //   socket.broadcast.emit('typing', data);
+  // });
+});
 const hbs = exphbs.create({ helpers });
 
 const sess = {
@@ -75,5 +81,5 @@ app.use(routes);
 
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening at http://localhost:3001/'));
+  server.listen(PORT, () => console.log('Now listening at http://localhost:3001/'));
 });
