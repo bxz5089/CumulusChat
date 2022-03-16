@@ -170,7 +170,7 @@ button:active {
 }
 
 .innerBox{
-  background-color: #f4f0e6;
+  background-color: #f0fb56;
   border-radius: 10px;
   padding: 5px 10px;
   margin: 5px 0px;
@@ -190,7 +190,7 @@ button:active {
 
 .messageHeader{
   font-size: 20px;
-  color: #ffffff;
+  color: #000000;
   font-family: 'Baloo 2', cursive;
   font-weight: bold;
   text-transform: uppercase;

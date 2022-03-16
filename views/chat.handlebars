@@ -4,31 +4,33 @@
   <br>
   <br>
   <div class="userWelcome">Welcome to Cumulus Chat, <span>{{username}}</span>!</div>
-  <div class="messageBox">
-    {{#if chats.length}}
-    <div>
-      {{#each chats as | chat |}} 
-      <ul class="innerBox">
-        <div class="messageHeader">{{chat.username}}<span class="messageTime">{{format_date chat.date_created}}</span></div>
-        <p id="messages">{{chat.message}}</p>
-      </ul> 
-      {{/each}}
-    </div>
-    {{/if}}
+  <div >
+    
+    <div id ="cumulus-chat" class="messageBox">
+      <div id="cumulus-window">
+
+          {{#each chats as | chat |}} 
+            <ul class="innerBox">
+              <div class="messageHeader" >{{chat.username}}<span class="messageTime">{{format_date chat.date_created}}</span></div>
+              <div id="output"></div>
+              <div id="feedback"></div>
+            </ul> 
+          {{/each}}
+
+        {{!-- <div id="output"></div>
+        <div id="feedback"></div> --}}
+      </div>
+
+    
   </div>
 
   <div class="input-group mb-3 messageInput">
   <input type="text" class="form-control" placeholder="Message" aria-label="Message" aria-describedby="basic-addon2" id="message">
-    <div id ="cumulus-chat">
-      <div id="cumulus-window">
-        <div id="output"></div>
-        <div id="feedback"></div>
-      </div>
+    
      <button id="send" type="button">Send</button>
     </div>
   </div>
-
-  <br>
+  
   <a href='/'><button id="logout" type='submit'>Logout</button></a>
   <script src="js/front_end_chat.js"></script>
 
