@@ -12,12 +12,12 @@ body {
 }
 
 Button {
-  background-color: #eb89ee;
+  background-color: #f0fb56;
   border-radius: 10px;
   border-style: solid;
-  border-color: #53ceff;
+  border-color: #f0fb56;
   font-size: 20px;
-  color:  #4007fb;
+  color:  #2e4564;
   padding: 0px 10px;
   font-family: 'Baloo 2', cursive;
   font-weight: bold;
@@ -190,7 +190,7 @@ button:active {
 
 .messageHeader{
   font-size: 20px;
-  color: #774f38;
+  color: #ffffff;
   font-family: 'Baloo 2', cursive;
   font-weight: bold;
   text-transform: uppercase;
