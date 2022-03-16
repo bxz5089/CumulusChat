@@ -55,7 +55,7 @@ const questions = [
 
 function generateMarkdown(data) {
   return`
-##Title
+##CUMULUS CHAT
  ${data.Title}
  ![Github licence](http://img.shields.io/badge/license-${data.license}-blue.svg)
 ${data.UserName}
