@@ -1,22 +1,23 @@
 /* main */
 a {
-  color: #774f38;
+  color: #ffffff;
   background-color: transparent;
   text-decoration: none;
+  font-size: 50pt;
 }
 
 body {
-  background-color: #f4f0e6;
+  background-color: rgb(15, 31, 83);
   margin-top: 20px;
 }
 
 Button {
-  background-color: #ece5ce;
+  background-color: #eb89ee;
   border-radius: 10px;
   border-style: solid;
-  border-color: #83af9b;
+  border-color: #53ceff;
   font-size: 20px;
-  color: #774f38;
+  color:  #4007fb;
   padding: 0px 10px;
   font-family: 'Baloo 2', cursive;
   font-weight: bold;
@@ -24,10 +25,10 @@ Button {
   margin: 5px 5px;
 }
 
-button:hover {background-color: #ece5ce}
+button:hover {background-color: #4f42ff}
 
 button:active {
-  background-color: #ece5ce;
+  background-color: #4f42ff;
   transform: translateY(2px);
 }
 
@@ -54,15 +55,15 @@ button:active {
   display: grid;
   place-items: center;
   font: 2vw system-ui;
-  background-color: #f4f0e6;
+  background-color: #344ec3;
 }
 
 .flowButton {
-  background-color: #ece5ce;
-  box-shadow: 10px 10px #83af9b;
+  background-color: #53ceff ;
+  box-shadow: 10px 10px #f0fb56;
   border-radius: 20px;
   font-size: 20px;
-  color: #774f38;
+  color:  #ffffff;
   padding: 0px 40px;
   font-family: 'Baloo 2', cursive;
   font-weight: bold;
@@ -80,12 +81,12 @@ button:active {
   font-weight: bold;
   letter-spacing: 3px;
   font-size: 35px;
-  color: #774f38;
-  background-color: #ece5ce;
+  color: #b79ef1;
+  background-color: #52ceff;
   padding: 40px;
   border-radius: 10px;
   position: relative;
-  box-shadow: 10px 15px #83af9b;
+  box-shadow: 10px 15px #f0fb56;
   font-family: 'Baloo 2', cursive;
 }
 
@@ -94,20 +95,20 @@ button:active {
   animation: float2 5s ease-in-out infinite;
   content: '.';
   font-weight: bold;
-  -webkit-text-fill-color: #ece5ce;
-  text-shadow: 22px 22px #83af9b;
+  -webkit-text-fill-color: #53ceff;
+  text-shadow: 22px 22px #f0fb56;
   text-align: left;
   font-size: 55px;
   width: 55px;
   height: 11px;
   line-height: 30px;
   border-radius: 11px;
-  background-color: #ece5ce;
+  background-color: #53ceff;
   position: absolute;
   display: block;
   bottom: -30px;
   left: 0;
-  box-shadow: 10px 15px #83af9b;
+  box-shadow: 10px 15px #f0fb56;
   z-index: -2;
 }
 @keyframes float {
