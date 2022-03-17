@@ -1,7 +1,7 @@
 
 ## CUMULUS CHAT
  
- ![Github licence](http://img.shields.io/badge/license-undefined-blue.svg)
+ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
 Hello, welcome to the Cumulus Chat app Github page. We created this chat app because we believe staying connected with friends is essential. The app is built using Node, Express, Sequelize, MySQL, Bootstrap, Handlebars, and Socket.io.
@@ -17,7 +17,7 @@ The following necessary dependencies must be installed to run the application pr
 # Usage
 This application is used for a real-time communication between users. 
 # License
-This project is license under the ISC license.
+This project is license under the MIT license.
 ## Collaborators 
 Elizabeth R. (Eli-coding) | Michael B. (mbarrienos1129)| Bowen Zheng (bxz5089)| Genevie Giko (Geneviealba)
 
