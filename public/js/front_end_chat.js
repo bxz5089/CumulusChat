@@ -19,14 +19,6 @@ socket.on('chat', function(data) {
   output.innerHTML += '<p><strong>' + data.handle + ': </strong>' + data.message + '</p>';
 });
 
-// const message = document.getElementById('message'),
-//   btn = document.getElementById('send'),
-//   output = document.getElementById('output'),
-//   feedback = document.getElementById('feedback');
-
-// btn.addEventListener('click', function() {
-//   socket.emit('chat', {
-//     message: message.value,
 
 
 
