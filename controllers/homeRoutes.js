@@ -49,7 +49,7 @@ router.get('/chat', withAuth, async (req, res) => {
 
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
-    alert('User was logged in previously!');
+    alert('User was previously logged in.');
     res.redirect('/chat');
     return;
   }
