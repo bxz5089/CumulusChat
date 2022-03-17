@@ -25,13 +25,16 @@ Button {
   margin: 5px 5px;
 }
 
-button:hover {background-color: #4f42ff}
+button:hover {background-color: #53ceff;}
 
 button:active {
-  background-color: #4f42ff;
+  background-color: #53ceff;
   transform: translateY(2px);
 }
 
+.mainBody{
+  margin-top: 30px;
+}
 
 .centerDiv { 
   height: 200px;
@@ -51,11 +54,11 @@ button:active {
 
 /* login page */
 .loginBody {
-  margin: 10px 0px;
-  display: grid;
+  margin-top: 30px;
   place-items: center;
   font: 2vw system-ui;
   background-color: #344ec3;
+  border-radius: 20px;
 }
 
 .flowButton {
@@ -116,7 +119,7 @@ button:active {
     transform: translatey(0px);
   }
   50% {
-    transform: translatey(-20px);
+    transform: translatey(-10px);
   }
   100% {
     transform: translatey(0px);
@@ -128,7 +131,7 @@ button:active {
     transform: translatey(0px);
   }
   55% {
-    transform: translatey(-20px);
+    transform: translatey(-10px);
   }
   60% {
     line-height: 10px;
@@ -195,7 +198,7 @@ button:active {
   font-weight: bold;
   text-transform: uppercase;
   margin: 0; 
-  padding: 5px 10px;
+  padding: 0;
 }
 
 #form { 
@@ -209,7 +212,7 @@ button:active {
   height: 3rem; 
   box-sizing: border-box; 
   backdrop-filter: blur(10px);
-  border-radius: 10px;
+  border-radius: 20px;
  }
  
 #input { border: none; padding: 0 1rem; flex-grow: 1; border-radius: 2rem; margin: 0.25rem; }
