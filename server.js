@@ -5,14 +5,12 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helper');
+const http = require('http');
+const socketio = require('socket.io');
 const app = express();
-// const http = require('http').Server(app);
-// const io = require('socket.io')(http);
 
-
-const server = require('http').createServer(app);
-const io = require('socket.io')(server);
-
+const server = http.createServer(app);
+const io = socketio(server);
 
 
 const sequelize = require('./config/connection');
@@ -20,15 +18,13 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const PORT = process.env.PORT || 3001;
 
-const users = {};
+// const users = {};
 
-
+//Run when client connects
 io.on('connection', socket => {
-  console.log('Socket connected', socket.id);
-  socket.on('chat', function(data) {
-    console.log(data);
-    io.sockets.emit('chat', data);
-  });
+  console.log('Socket connected');
+
+  socket.emit('message', 'Welcome to Cumulus Chat');
 });
 
 const hbs = exphbs.create({ helpers });
@@ -46,11 +42,14 @@ const sess = {
 app.use(session(sess));
 
 // Inform Express.js on which template engine to use
+
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+//set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
