@@ -31,8 +31,6 @@ Elizabeth R. (Eli-coding) | Michael B. (mbarrienos1129)| Bowen Zheng (bxz5089)| 
 - https://www.bootdey.com/snippets/view/chat-app
 - https://elements.envato.com/clouds-C9BNYML
 
-If you followed tutorials, include links to those here as well.
-
 # Sreenshot 
 ![Cumulus](public/assets/Cumulus1.png)
 # Questions
