@@ -16,6 +16,12 @@ Hello, welcome to the Cumulus Chat app Github page. We created this chat app bec
 The following necessary dependencies must be installed to run the application properly: npm install socket.io, run node and mysql -u root -p
 # Usage
 ​This application is used for a real-time communication between users. 
+
+npm install
+npm run dev
+
+Go to localhost:3001
+
 # License
 This project is license under the ISC license.
 ## Contributing
