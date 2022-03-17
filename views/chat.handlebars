@@ -1,5 +1,3 @@
- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
-
 <body>
   <br>
   <div class="userWelcome">Welcome to Cumulus Chat, <span>{{username}}</span>!</div>
@@ -7,31 +5,27 @@
   <div >
     
     <div id ="cumulus-chat" class="messageBox">
-      {{!-- {{#if users.length}} --}}
+
       <div id="cumulus-window">
 
-          {{!-- {{#each users as | user|}}  --}}
             <ul class="innerBox">
-              <div class="messageHeader">{{username}}</div>
+              {{!-- <div class="messageHeader">{{username}}</div> --}}
               <div id="output"></div>
               <div id="feedback"></div>
             </ul> 
-          {{!-- {{/each}} --}}
 
-        {{!-- <div id="output"></div>
-        <div id="feedback"></div> --}}
       </div>
-      {{!-- {{/if}} --}}
-    
+
   </div>
 
   <div class="input-group mb-3 messageInput">
-  <input type="text" class="form-control" placeholder="Message" aria-label="Message" aria-describedby="basic-addon2" id="message">
-    
-     <button id="send" type="button">Send</button>
-    </div>
+    <input type="text" class="form-control" placeholder="Message" aria-label="Message" aria-describedby="basic-addon2" id="message">
+    <button id="send" type="button">Send</button>
   </div>
-  
-  <script src="js/front_end_chat.js"></script>
+  </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
+  <script src="js/front_end_chat.js"></script>
+   
   </body>
+
