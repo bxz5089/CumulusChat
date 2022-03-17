@@ -6,6 +6,7 @@ const message = document.getElementById('message'),
   output = document.getElementById('output'),
   feedback = document.getElementById('feedback');
 
+//Message submit
 btn.addEventListener('click', function() {
   socket.emit('chat', {
     message: message.value,
@@ -26,21 +27,6 @@ socket.on('chat', function(data) {
 // btn.addEventListener('click', function() {
 //   socket.emit('chat', {
 //     message: message.value,
-//   });
-//   message.value = '';
 
- 
-// });
 
-// socket.on('connection', io => {
-//   console.log('New ws connection...');
-// });
-// ('chat', function(data) {
-//   feedback.innerHTML = '';
-//   output.innerHTML += '<p><strong>' + data.handle + ': </strong>' + data.message + '</p>';
-// });
-
-// message.addEventListener('keypress', function () {
-//   socket.emit('typing', handle.value);
-// });
 
