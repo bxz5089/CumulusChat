@@ -11,6 +11,15 @@ body {
   margin-top: 20px;
 }
 
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
 Button {
   background-color: #f0fb56;
   border-radius: 10px;
