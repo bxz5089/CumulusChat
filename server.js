@@ -10,6 +10,7 @@ const app = express();
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
 
+
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 

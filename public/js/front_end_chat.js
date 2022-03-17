@@ -1,6 +1,7 @@
 //socket.io test
 const socket = io();
-
+const mysql = require('mysql');
+const userName = mysql.createConnection();
 const message = document.getElementById('message'),
   btn = document.getElementById('send'),
   output = document.getElementById('output'),
