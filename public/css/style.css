@@ -26,7 +26,7 @@ Button {
   border-style: solid;
   border-color: #53ceff;
   font-size: 20px;
-  color:  #2e4564;
+  color: #2e4564;
   padding: 0px 10px;
   font-family: 'Baloo 2', cursive;
   font-weight: bold;
@@ -34,23 +34,25 @@ Button {
   margin: 5px 5px;
 }
 
-button:hover {background-color: #53ceff;}
+button:hover {
+  background-color: #53ceff;
+}
 
 button:active {
   background-color: #53ceff;
   transform: translateY(2px);
 }
 
-.mainBody{
+.mainBody {
   margin-top: 30px;
 }
 
-.centerDiv { 
+.centerDiv {
   height: 200px;
   position: relative;
 }
 
-.center{
+.center {
   margin: 0;
   position: absolute;
   top: 50%;
@@ -71,11 +73,11 @@ button:active {
 }
 
 .flowButton {
-  background-color: #53ceff ;
+  background-color: #53ceff;
   box-shadow: 10px 10px #f0fb56;
   border-radius: 20px;
   font-size: 20px;
-  color:  #ffffff;
+  color: #ffffff;
   padding: 0px 40px;
   font-family: 'Baloo 2', cursive;
   font-weight: bold;
@@ -153,7 +155,7 @@ button:active {
 /*login page end */
 
 /* chat page */
-.userWelcome{
+.userWelcome {
   background-color: #53ceff;
   box-shadow: 10px 10px #f0fb56;
   color: #1c2d79;
@@ -165,13 +167,13 @@ button:active {
   text-align: center;
 }
 
-.userWelcome span{
+.userWelcome span {
   color: #2d65ff;
   font-weight: 700;
   text-transform: uppercase;
 }
 
-.messageBox{
+.messageBox {
   background-color: #8cdeff;
   box-shadow: 10px 10px rgb(15, 31, 83);
   height: 400px;
@@ -181,55 +183,78 @@ button:active {
   border-radius: 10px;
 }
 
-.innerBox{
+.innerBox {
   background-color: #f0fb56;
   border-radius: 10px;
   padding: 5px 10px;
   margin: 5px 0px;
-
 }
 
-.messageInput{
+.messageInput {
   background-color: #52ceff;
   box-shadow: 10px 10px rgb(15, 31, 83);
   border-radius: 10px;
 }
 
-.messageTime{
+.messageTime {
   font-size: 12px;
   padding: 0px 5px;
 }
 
-.messageHeader{
+.messageHeader {
   font-size: 20px;
   color: #000000;
   font-family: 'Baloo 2', cursive;
   font-weight: bold;
   text-transform: uppercase;
-  margin: 0; 
+  margin: 0;
   padding: 0;
 }
 
-#form { 
-  background: rgba(0, 0, 0, 0.15); 
-  padding: 0.25rem; 
-  position: fixed; 
-  bottom: 20px; 
-  left: 20%; 
-  right: 20%; 
-  display: flex; 
-  height: 3rem; 
-  box-sizing: border-box; 
+#form {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0.25rem;
+  position: fixed;
+  bottom: 20px;
+  left: 20%;
+  right: 20%;
+  display: flex;
+  height: 3rem;
+  box-sizing: border-box;
   backdrop-filter: blur(10px);
   border-radius: 20px;
- }
- 
-#input { border: none; padding: 0 1rem; flex-grow: 1; border-radius: 2rem; margin: 0.25rem; }
-#input:focus { outline: none; }
-#form > button { background: #333; border: none; padding: 0 1rem; margin: 0.25rem; border-radius: 3px; outline: none; color: #fff; }
+}
 
-#messages { list-style-type: none; margin: 0; padding: 5px 10px; }
-#messages > li { padding: 0.5rem 1rem; }
-#messages > li:nth-child(odd) { background: #efefef; }
+#input {
+  border: none;
+  padding: 0 1rem;
+  flex-grow: 1;
+  border-radius: 2rem;
+  margin: 0.25rem;
+}
+#input:focus {
+  outline: none;
+}
+#form > button {
+  background: #333;
+  border: none;
+  padding: 0 1rem;
+  margin: 0.25rem;
+  border-radius: 3px;
+  outline: none;
+  color: #fff;
+}
+
+#messages {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px 10px;
+}
+#messages > li {
+  padding: 0.5rem 1rem;
+}
+#messages > li:nth-child(odd) {
+  background: #efefef;
+}
 
 /* chat page end */
