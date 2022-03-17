@@ -2,59 +2,36 @@
 
 <body>
   <br>
-  <br>
   <div class="userWelcome">Welcome to Cumulus Chat, <span>{{username}}</span>!</div>
-  <div class="messageBox">
-    {{#if chats.length}}
-    <div>
-      {{#each chats as | chat |}} 
-      <ul class="innerBox">
-        <div class="messageHeader">{{chat.username}}<span class="messageTime">{{format_date chat.date_created}}</span></div>
-        <p id="messages">{{chat.message}}</p>
-      </ul> 
-      {{/each}}
-    </div>
-    {{/if}}
+  <a href='/'><button id="logout" type='submit'>Logout</button></a>
+  <div >
+    
+    <div id ="cumulus-chat" class="messageBox">
+      {{!-- {{#if users.length}} --}}
+      <div id="cumulus-window">
+
+          {{!-- {{#each users as | user|}}  --}}
+            <ul class="innerBox">
+              <div class="messageHeader">{{username}}</div>
+              <div id="output"></div>
+              <div id="feedback"></div>
+            </ul> 
+          {{!-- {{/each}} --}}
+
+        {{!-- <div id="output"></div>
+        <div id="feedback"></div> --}}
+      </div>
+      {{!-- {{/if}} --}}
+    
   </div>
 
   <div class="input-group mb-3 messageInput">
   <input type="text" class="form-control" placeholder="Message" aria-label="Message" aria-describedby="basic-addon2" id="message">
-    <div id ="cumulus-chat">
-      <div id="cumulus-window">
-        <div id="output"></div>
-        <div id="feedback"></div>
-      </div>
+    
      <button id="send" type="button">Send</button>
     </div>
   </div>
-
-  <br>
-  <a href='/'><button id="logout" type='submit'>Logout</button></a>
   
-    <script src="/socket.io/socket.io.js"></script>
   <script src="js/front_end_chat.js"></script>
 
-
-  {{!-- <script>
-    var socket = io();
-
-    var messages = document.getElementById('messages');
-    var form = document.getElementById('form');
-    var input = document.getElementById('input');
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      if (input.value) {
-        socket.emit('chat message', input.value);
-        input.value = '';
-      }
-    });
-
-    socket.on('chat message', function(msg) {
-      var item = document.createElement('li');
-      item.textContent = msg;
-      messages.appendChild(item);
-      window.scrollTo(0, document.body.scrollHeight);
-    });
-  </script>  --}}
   </body>
