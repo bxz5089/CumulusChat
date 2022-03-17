@@ -5,12 +5,11 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helper');
-const http = require('http');
-const socketio = require('socket.io');
 const app = express();
 
-const server = http.createServer(app);
-const io = socketio(server);
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
+
 
 
 const sequelize = require('./config/connection');
@@ -18,13 +17,14 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const PORT = process.env.PORT || 3001;
 
-// const users = {};
 
 //Run when client connects
 io.on('connection', socket => {
-  console.log('Socket connected');
-
-  socket.emit('message', 'Welcome to Cumulus Chat');
+  console.log('Socket connected', socket.id);
+  socket.on('chat', function(data) {
+    console.log(data);
+    io.sockets.emit('chat', data);
+  });
 });
 
 const hbs = exphbs.create({ helpers });
