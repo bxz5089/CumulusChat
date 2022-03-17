@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "alert": "^5.0.10",
     "bcrypt": "^5.0.0",
     "bootstrap-icons": "^1.8.1",
     "connect-session-sequelize": "^7.0.4",
@@ -21,6 +22,7 @@
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
     "inquirer": "^8.2.1",
+    "moment": "^2.24.0",
     "mysql2": "^2.2.5",
     "sequelize": "^6.3.5",
     "socket.io": "^4.4.1"

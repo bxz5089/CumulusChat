@@ -24,6 +24,6 @@ This project is license under the ISC license.
 To run tests, you need to run the following command: undefined
 
 # Sreenshot 
-![Cumulus](/utils/Cumulus1.png)
+![Cumulus](public/assets/Cumulus1.png)
 # Questions
 If you have any questions about the repo, open an issue or contact Eli-coding, bxz5089, mbarrienos1129, Geneviealba directly bxz5089@gmail.com, elizabethyoannnie2020@gmail.com, michael.barrientos@gmail.com and sunnydayvirtual@gmail.com.

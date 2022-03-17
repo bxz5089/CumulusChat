@@ -12,6 +12,11 @@
 </head>
 
 <body>
+
+  <video autoplay muted loop id="myVideo">
+  <source src="assets/cloudbackground.mp4" type="video/mp4">
+  </video>
+
   <div class="flex-column justify-space-around">
     <div class='container py-5 h-100'>
     <div class='row d-flex justify-content-center align-items-center h-100'>
@@ -20,19 +25,16 @@
         <a href="/">Cumulus Chat</a>
       </h1>
     </header>
+    
 
     <main class="mainBody">
       {{{ body }}}
     </main>
     
-    <footer>
-      
-    </footer>
     </div>
     </div>
   </div>
 
-  <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="js/logout.js"></script>
   {{/if}}
