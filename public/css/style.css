@@ -86,6 +86,7 @@ button:active {
   font: 2vw system-ui;
   background-color: #354588;
   border-radius: 20px;
+  font-family: 'Baloo 2', cursive;
 }
 
 .flowButton {
