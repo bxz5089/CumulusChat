@@ -5,6 +5,8 @@
 
 ## Description
 Hello, welcome to the Cumulus Chat app Github page. We created this chat app because we believe staying connected with friends is essential. The app is built using Node, Express, Sequelize, MySQL, Bootstrap, Handlebars, and Socket.io.
+## Deploy link
+https://infinite-caverns-73704.herokuapp.com/
 ## Table of Contents 
 * [Installation](#installation)
 * [Usage](#usage)
