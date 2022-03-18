@@ -5,11 +5,10 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helper');
-const app = express();
 
+const app = express();
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
-
 
 
 const sequelize = require('./config/connection');
@@ -18,13 +17,15 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const PORT = process.env.PORT || 3001;
 
 
-//Run when client connects
+
 io.on('connection', socket => {
   console.log('Socket connected', socket.id);
+
   socket.on('chat', function(data) {
     console.log(data);
     io.sockets.emit('chat', data);
   });
+
 });
 
 const hbs = exphbs.create({ helpers });
@@ -41,19 +42,16 @@ const sess = {
 
 app.use(session(sess));
 
-// Inform Express.js on which template engine to use
-
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-//set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
-  server.listen(PORT, () => console.log('Now listening at http://localhost:3001/'));
+  server.listen(PORT, () => console.log(`Now listening at http://localhost:${PORT}/`));
 });

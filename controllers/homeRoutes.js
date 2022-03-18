@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Chat, User } = require('../models');
 const withAuth = require('../utils/auth');
+const alert = require('alert'); 
 
 router.get('/', async (req, res) => {
   res.render('start');
@@ -27,10 +28,8 @@ router.get('/', async (req, res) => {
 //   }
 // });
 
-// Use withAuth middleware to prevent access to route
 router.get('/chat', withAuth, async (req, res) => {
   try {
-    // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
       include: [{ model: Chat }],
@@ -47,13 +46,13 @@ router.get('/chat', withAuth, async (req, res) => {
   }
 });
 
-router.get('/login', (req, res) => {
-  // If the user is already logged in, redirect the request to another route
-  // if (req.session.logged_in) {
-  //   res.redirect('/chat');
-  //   return;
-  // }
 
+router.get('/login', (req, res) => {
+  if (req.session.logged_in) {
+    alert('User was previously logged in.');
+    res.redirect('/chat');
+    return;
+  }
   res.render('login');
 });
 

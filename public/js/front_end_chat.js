@@ -1,6 +1,7 @@
 //socket.io test
 const socket = io();
-
+const mysql = require('mysql');
+const userName = mysql.createConnection();
 const message = document.getElementById('message'),
   btn = document.getElementById('send'),
   output = document.getElementById('output'),
@@ -8,6 +9,7 @@ const message = document.getElementById('message'),
 
 btn.addEventListener('click', function() {
   socket.emit('chat', {
+    username: socket.id,
     message: message.value,
   });
   message.value = '';
@@ -15,8 +17,9 @@ btn.addEventListener('click', function() {
 
 socket.on('chat', function(data) {
   feedback.innerHTML = '';
-  output.innerHTML += '<p><strong>' + data.handle + ': </strong>' + data.message + '</p>';
+  output.innerHTML += '<p><strong>' + data.username + ': </strong>' + data.message + '</p>';
 });
+
 
 // const message = document.getElementById('message'),
 //   btn = document.getElementById('send'),
