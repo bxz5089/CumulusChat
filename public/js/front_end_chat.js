@@ -1,4 +1,5 @@
 //socket chat connection
+const username = document.querySelector('#name-signup');
 const socket = io();
 
 const message = document.getElementById('message'),
@@ -8,7 +9,7 @@ const message = document.getElementById('message'),
 
 btn.addEventListener('click', function() {
   socket.emit('chat', {
-    username: socket.id,
+    username: document.getElementById('usernameio').innerHTML,
     message: message.value,
   });
   message.value = '';
