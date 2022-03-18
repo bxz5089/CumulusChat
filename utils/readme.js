@@ -1,6 +1,6 @@
 // imports
 const inquirer = require('inquirer');
-const fs = require('fs'); 
+const fs = require('fs');
 
 // Questions asked to the user
 const questions = [
