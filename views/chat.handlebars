@@ -1,14 +1,14 @@
 <body>
   <br>
   <div class="userWelcome">Welcome to Cumulus Chat, <span id="usernameio">{{username}}</span>!</div>
-  <a href='/'><button id="logout" type='submit'>Logout</button></a>
+  <a href='/'><button class="logoutButton" id="logout" type='submit'>Logout</button></a>
   <div >
     
     <div id ="cumulus-chat" class="messageBox">
 
       <div id="cumulus-window">
 
-            <ul class="innerBox">
+            <ul class="messageList">
               <div id="output"></div>
               <div id="feedback"></div>
             </ul> 
@@ -24,7 +24,7 @@
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js"></script>
-  <script src="js/front_end_chat.js"></script>
+  <script src="js/chat.js"></script>
    
   </body>
 
