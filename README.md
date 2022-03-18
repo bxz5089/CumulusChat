@@ -13,6 +13,7 @@ https://infinite-caverns-73704.herokuapp.com/
 * [License](#license)
 * [Collaborators](#collaborators)
 * [Credits](#credits)
+* [Screenshot](#screenshot)
 * [Questions](#questions)
 ## Installation
 The following steps must be completed if application is pulled from GitHub rather than the deploy link. User must first clone the repo, open up intergrated terminal in VS Code, npm i to install all dependencies, set up personal My SQL and source the schema. sql file, npm run seed, and lastly npm start to run the server on you local machine.
