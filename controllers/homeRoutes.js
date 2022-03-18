@@ -7,27 +7,6 @@ router.get('/', async (req, res) => {
   res.render('start');
 });
 
-// router.get('/chat', async (req, res) => {
-//   try {
-//     // const chatData = await Chat.findByPk(req.params.id, {
-//     //   include: [
-//     //     {
-//     //       model: chat,
-//     //     },
-//     //   ],
-//     // });
-
-//     // const chat = chatData.get({ plain: true });
-
-//     res.render('chat', {
-//       // ...chat,
-//       // logged_in: req.session.logged_in,
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
 router.get('/chat', withAuth, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id, {

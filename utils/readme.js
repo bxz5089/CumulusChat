@@ -80,10 +80,10 @@ This project is license under the ${data.License} license.
 To run tests, you need to run the following command: ${data.Test}
 # Questions
 If you have any questions about the repo, open an issue or contact ${data.UserName} directly ${data.Email}.
-`
+`;
 }
 
-//Writing to a file 
+//Writing to a file
 
 function writeToFile(fileName, data) {
 
