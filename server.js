@@ -19,10 +19,8 @@ const PORT = process.env.PORT || 3001;
 
 
 io.on('connection', socket => {
-  console.log('Socket connected', socket.id);
 
   socket.on('chat', function(data) {
-    console.log(data);
     io.sockets.emit('chat', data);
   });
 
