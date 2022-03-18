@@ -15,7 +15,7 @@ https://infinite-caverns-73704.herokuapp.com/
 * [Credits](#credits)
 * [Questions](#questions)
 ## Installation
-The following necessary dependencies must be installed to run the application properly: npm install socket.io, run node and mysql -u root -p
+The following steps must be completed if application is pulled from GitHub rather than the deploy link. User must first clone the repo, open up intergrated terminal in VS Code, npm i to install all dependencies, set up personal My SQL and source the schema. sql file, npm run seed, and lastly npm start to run the server on you local machine.
 # Usage
 This application is used for a real-time communication between users. 
 # License
