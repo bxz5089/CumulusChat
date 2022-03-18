@@ -1,3 +1,4 @@
+//socket chat connection
 const socket = io();
 
 const message = document.getElementById('message'),
@@ -7,7 +8,7 @@ const message = document.getElementById('message'),
 
 btn.addEventListener('click', function() {
   socket.emit('chat', {
-    username: User.username,
+    username: socket.id,
     message: message.value,
   });
   message.value = '';
