@@ -31,7 +31,7 @@ Elizabeth R. (Eli-coding) | Michael B. (mbarrienos1129)| Bowen Zheng (bxz5089)| 
 - https://www.youtube.com/watch?v=rxzOqP9YwmM
 - https://codepen.io/kirstenallen/pen/MWwPYYm
 - https://www.bootdey.com/snippets/view/chat-app
-- https://elements.envato.com/clouds-C9BNYML
+- https://elements.envato.com/seamless-loop-of-clouds-storm-clouds-and-blue-sky--LUX5JGE
 
 # Sreenshot 
 ![Cumulus](public/assets/Cumulus1.png)
