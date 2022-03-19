@@ -37,7 +37,8 @@ Elizabeth R. (Eli-coding) | Michael B. (mbarrienos1129)| Bowen Zheng (bxz5089)| 
 # Sreenshot 
 ![Cumulus](public/assets/ScreenShot1.png)
 ![Cumulus](public/assets/ScreenShot2.png)
-![Cumulus](pulic/assets/cloud.png)
+![cloud](https://user-images.githubusercontent.com/94097708/159130156-30e289ac-5a7b-4fe8-9f2b-2b0e67efa055.png)
+
 
 # Questions
 If you have any questions about the repo or an issue you can contact us directly by email.
