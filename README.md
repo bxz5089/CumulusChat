@@ -34,6 +34,9 @@ Elizabeth R. (Eli-coding) | Michael B. (mbarrienos1129)| Bowen Zheng (bxz5089)| 
 - https://www.bootdey.com/snippets/view/chat-app
 - https://elements.envato.com/seamless-loop-of-clouds-storm-clouds-and-blue-sky--LUX5JGE
 
+# Sreenshot 
+![Cumulus](public/assets/ScreenShot1.png)
+![Cumulus](public/assets/ScreenShot2.png)
 
 # Questions
 If you have any questions about the repo or an issue you can contact us directly by email.

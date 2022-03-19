@@ -22,6 +22,7 @@ io.on('connection', socket => {
 
   socket.on('chat', function(data) {
     io.sockets.emit('chat', data);
+    console.log(data);
   });
 
 });

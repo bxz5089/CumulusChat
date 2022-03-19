@@ -9,6 +9,7 @@ a {
 body {
   background-color: rgb(15, 31, 83);
   margin-top: 20px;
+  font-family: 'Baloo 2', cursive;
 }
 
 #myVideo {
@@ -26,7 +27,7 @@ Button {
   border-style: solid;
   border-color: #53ceff;
   font-size: 20px;
-  color: #2e4564;
+  color: #ffffff;
   padding: 0px 10px;
   font-family: 'Baloo 2', cursive;
   font-weight: bold;
@@ -61,6 +62,21 @@ button:active {
   transform: translate(-50%, -50%);
 }
 
+.logoutButton {
+  background-color: #53ceff;
+  box-shadow: 10px 10px #f0fb56;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #53ceff;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 0px 10px;
+  font-family: 'Baloo 2', cursive;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin: 5px 5px;
+}
+
 /* main end */
 
 /* login page */
@@ -68,8 +84,9 @@ button:active {
   margin-top: 30px;
   place-items: center;
   font: 2vw system-ui;
-  background-color: #344ec3;
+  background-color: #354588;
   border-radius: 20px;
+  font-family: 'Baloo 2', cursive;
 }
 
 .flowButton {
@@ -162,8 +179,8 @@ button:active {
   padding: 10px;
   border-radius: 10px;
   margin-top: 10px;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -175,12 +192,18 @@ button:active {
 
 .messageBox {
   background-color: #8cdeff;
-  box-shadow: 10px 10px rgb(15, 31, 83);
+  box-shadow: 10px 10px #354588;
   height: 400px;
   margin: 20px auto 20px auto;
   width: 100%;
   padding: 10px;
   border-radius: 10px;
+}
+
+.messageList{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .innerBox {
@@ -190,9 +213,13 @@ button:active {
   margin: 5px 0px;
 }
 
+.messageUsername {
+  text-transform: uppercase;
+}
+
 .messageInput {
   background-color: #52ceff;
-  box-shadow: 10px 10px rgb(15, 31, 83);
+  box-shadow: 10px 10px #354588;
   border-radius: 10px;
 }
 
